@@ -10,12 +10,17 @@ class App extends React.Component {
     this.state = { 
       repos: []
     }
-
+    this.search = this.search.bind(this);
+    console.log('hi props:', this.props);
   }
 
   search (term) {
+    
     console.log(`${term} was searched`);
     // TODO
+
+    this.state.repos.push(term);
+    console.log(this.state.repos);
   }
 
   render () {
